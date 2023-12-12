@@ -43,12 +43,17 @@ header {
   background-color: inherit;
   padding-top: 24px;
   padding-bottom: 24px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .foot {
   font-family: "Raleway", sans-serif;
   color: #f4f4fd;
   background-color: #2e2f42;
+  padding: 100px 0;
+}
+
+.border-head{
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 a:link {
   text-decoration: none;
@@ -64,6 +69,11 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+.top{
+  width: 1158px;
+  padding: 0 15px;
 }
 
 .top-line {
@@ -86,14 +96,27 @@ a:active {
   color: #404bbf;
 }
 
-.top-line ul {
+.menu {
   display: flex;
   gap: 40px;
 }
 
-.top-line nav {
+.menu-li{
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 24px 0;
+}
+
+.navig {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   margin-right: 332px;
 }
@@ -107,10 +130,12 @@ a:active {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   margin-right: 76px;
-  display: inline-flex;
+  display: inline-block;
   height: 24px;
   align-items: center;
   flex-shrink: 0;
+  margin-bottom: 16px;
+  
 }
 
 .header-logo {
@@ -153,6 +178,7 @@ a:active {
 .hero-image {
   color: #ffffff;
   background-color: #2e2f42;
+  padding: 188px 0
 }
 .but-on {
   color: #ffffff;
@@ -163,11 +189,16 @@ a:active {
   cursor: pointer;
   line-height: 150%;
   letter-spacing: 0.64px;
-  display: inline-flex;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
   padding: 16px 32px;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  margin-top: 48px;
+  margin: auto;
+  margin-top:48px;
 }
 .but-on:hover {
   background-color: #404bbf;
@@ -197,7 +228,7 @@ a:active {
 
 .feature {
   display: flex;
-  width: 264px;
+  width: calc((100% - 72px) / 4);
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
@@ -210,7 +241,7 @@ a:active {
   line-height: 107.143%;
   letter-spacing: 1.12px;
   text-align: center;
-  width: 496px;
+  max-width: 496px;
 }
 .header-two {
   color: #2e2f42;
@@ -228,6 +259,8 @@ a:active {
   font-weight: 500;
   line-height: 120%;
   letter-spacing: 0.4px;
+  text-align: center;
+  margin-bottom: 8px
 }
 .paragraph {
   color: #434455;
@@ -235,6 +268,8 @@ a:active {
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.32px;
+  text-align: center;
+  margin-bottom: 8px;
 }
 .footer-text {
   color: #f4f4fd;
@@ -245,6 +280,7 @@ a:active {
 }
 .list {
   background-color: #fff;
+  padding: 120px 0;
 }
 
 .content-team {
@@ -254,13 +290,14 @@ a:active {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  padding: 32px 0;
 }
 .cards {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-.cards ul {
-  display: inline-flex;
+.cards-ul {
+  display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
@@ -270,12 +307,23 @@ a:active {
   flex-shrink: 0;
 }
 
-.hidden {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .our-team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team {
@@ -284,12 +332,22 @@ a:active {
   flex-shrink: 0;
 }
 
+.our-portfolio{ 
+  padding-top: 120px; 
+  padding-bottom: 120px;
+}
+
 .portfolio {
   width: 1440px;
   flex-wrap: wrap;
   flex-shrink: 0;
 }
 
+.portfolio-ul{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+}
 .content-portfolio {
   display: flex;
   padding: 0px 16px;
@@ -298,6 +356,8 @@ a:active {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
 }
 
 .card-portfolio {
@@ -309,8 +369,6 @@ a:active {
   align-items: flex-start;
   gap: 32px;
   flex-shrink: 0;
-  border: 1px solid var(--CORNFLOWER, #e7e9fc);
-  background: var(--WHITE, #fff);
 }
 
 .image-portfolio {
